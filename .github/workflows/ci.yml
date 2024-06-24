@@ -1,6 +1,5 @@
 name: CI
 
-# Trigger the workflow on push and pull request to the main branch
 on:
   push:
     branches:
@@ -11,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
+    runs-on: ubuntu-latest  
 
     steps:
       # Step 1: Checkout the repository
