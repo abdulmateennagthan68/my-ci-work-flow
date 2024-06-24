@@ -21,11 +21,20 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Navigate into the directory with package.json
-        run: cd path/to/your/project/directory
-
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm --version  # Output npm version for debugging
 
       - name: Run tests
-        run: npm test
+        run: |
+          npm test
+          echo "Tests completed successfully"
+
+      - name: Display directory structure
+        run: |
+          ls -l  # List files in the current directory for debugging
+
+      - name: Display environment variables
+        run: |
+          env  # Output environment variables for debugging
